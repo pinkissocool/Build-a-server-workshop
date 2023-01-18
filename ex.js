@@ -31,7 +31,7 @@ app.get('/api/courses/:id', (req, res)=>{
 app.post('/api/courses', (req,res) => {
     // you write the if code here
     //add an if statement so that the name of the course you post is .min(3) characters 
-    if (req.min(3)){
+    if (req.body.name.length > 3){
         const course ={
             //we assign an ID and a name property
             id: courses.length +1,
